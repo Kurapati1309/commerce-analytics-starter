@@ -1,0 +1,10 @@
+# Windows-safe essentials for data generation and utilities
+pandas
+numpy
+pyarrow
+python-dateutil
+boto3
+
+# OPTIONAL (try after data generation; if they fail on Windows, use WSL/Docker)
+# dbt-core==1.7.13
+# dbt-redshift==1.7.3

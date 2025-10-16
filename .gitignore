@@ -1,0 +1,13 @@
+# python / venv
+.venv/
+__pycache__/
+*.pyc
+
+dbt/target/
+dbt/logs/
+
+lake/
+exports/
+
+.DS_Store
+Thumbs.db

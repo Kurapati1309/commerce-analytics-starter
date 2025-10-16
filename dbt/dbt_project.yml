@@ -1,0 +1,20 @@
+name: 'commerce_dbt'
+version: '1.0.0'
+config-version: 2
+
+profile: 'commerce_redshift'
+
+model-paths: ['models']
+snapshot-paths: ['snapshots']
+seed-paths: ['seeds']
+test-paths: ['tests']
+
+models:
+  commerce_dbt:
+    +materialized: view
+    bronze:
+      +tags: ['bronze']
+    silver:
+      +tags: ['silver']
+    gold:
+      +tags: ['gold']

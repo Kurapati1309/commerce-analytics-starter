@@ -1,0 +1,15 @@
+# Copy this into ~/.dbt/profiles.yml and fill in credentials.
+commerce_redshift:
+  target: dev
+  outputs:
+    dev:
+      type: redshift
+      host: YOUR-REDSHIFT-ENDPOINT
+      user: YOUR-USER
+      password: YOUR-PASSWORD
+      port: 5439
+      dbname: commerce_dw
+      schema: analytics
+      threads: 4
+      keepalives_idle: 0
+      sslmode: prefer

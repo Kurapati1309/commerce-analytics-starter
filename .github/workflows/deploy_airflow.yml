@@ -1,0 +1,15 @@
+name: deploy-airflow-dags
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - 'airflow/dags/**'
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Package DAGs
+        run: tar -czf dags.tgz airflow/dags
+      # TODO: Add step to sync to MWAA S3 bucket
